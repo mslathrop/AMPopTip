@@ -230,6 +230,12 @@ typedef NS_ENUM(NSInteger, AMPopTipDirection) {
  */
 @property (nonatomic, assign) BOOL shouldDismissOnTapOutside;
 
+/** Dismiss Cancel Touches In View
+ *
+ * A boolean value that determines whether or not a dismiss tap cancels touches in view.
+ */
+@property (nonatomic, assign) BOOL shouldDismissCancelTouchesInView;
+
 /** Tap handler
  *
  * A block that will be fired when the user taps the popover.

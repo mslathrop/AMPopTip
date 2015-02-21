@@ -69,6 +69,7 @@
         _animationOut = kDefaultAnimationOut;
         _isVisible = NO;
         _shouldDismissOnTapOutside = YES;
+        _shouldDismissCancelTouchesInView = YES;
         _edgeMargin = 0;
         _edgeInsets = kDefaultEdgeInsets;
         _rounded = NO;
@@ -445,6 +446,10 @@
     self.text = text;
     self.accessibilityLabel = text;
     [self setNeedsLayout];
+}
+
+- (void)setShouldDismissCancelTouchesInView:(BOOL)shouldDismissCancelTouchesInView {
+    _removeGesture.cancelsTouchesInView = shouldDismissCancelTouchesInView;
 }
 
 - (void)dealloc
